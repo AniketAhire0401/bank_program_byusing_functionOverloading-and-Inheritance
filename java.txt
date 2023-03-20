@@ -1,0 +1,74 @@
+package homework;
+import java.util.*;
+
+class Bank
+{
+	 int getbalance()
+	 {
+		 return 0;
+	 }
+}
+
+class Bank_A extends Bank
+{
+	int getbalance(int Balance)
+	{
+		System.out.println("Bank Name : A");
+		System.out.println("Balance Deposited : "+Balance);
+		return Balance;
+	}
+}
+
+class Bank_B extends Bank
+{
+	int getbalance(int Balance)
+	{
+		System.out.println("Bank Name : B");
+		System.out.println("Balance Deposited : "+Balance);
+		return Balance;
+	}
+}
+
+class Bank_C extends Bank
+{
+	int getbalance(int Balance)
+	{
+		System.out.println("Bank Name : C");
+		System.out.println("Balance Deposited : "+Balance);
+		return Balance;
+	}
+}
+
+public class method_overloading {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num;
+		Bank_A A=new Bank_A();
+		Bank_B B=new Bank_B();
+		Bank_C C=new Bank_C();
+		System.out.print("Enter Amount to be Deposite : ");
+		num=sc.nextInt();
+		
+		switch(num)
+		{
+		case 1000:A.getbalance(num);
+					break;
+					
+		case 1500:B.getbalance(num);
+					break;
+					
+		case 2000:C.getbalance(num);
+					break;
+				
+		default:
+			System.out.println("Enter Correct Amount");
+		}
+		System.out.println();
+		
+	
+		
+
+	}
+
+}
